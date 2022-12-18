@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Common */
+.btn {
+    padding: 8px;
+    margin: 0 8px;
+}
+
+/* Header */
+#header {
+    width: 100vw;
+    height: 610px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#header .navbar {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .navbar .logo {
+    width: 15%;
+}
+
+#header .navbar .logo img {
+    width: 100%;
+    min-width: 130px;
+    height: 100%;
+}
+
+#header .navbar .navigation {
+}
+
+#header .navbar .navigation ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#header .navbar .navigation ul li {
+
+}
+
+#header .navbar .navigation ul li:hover {
+    cursor: pointer;
+    background: rgb(19, 116, 0);
+    border-radius: 4px;
+    color: #fff;
+    animation: btnHover 0.2s ease;
+}
+
+#header .navbar .navigation ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.726);
+}
+
+#header .navbar .search {
+    width: auto;
+    height: auto;
+    background: rgba(228, 228, 228, 0.329);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+#header .navbar .search input {
+    height: 28px;
+    outline: none;
+    padding: 0 8px;
+    border: none;
+    background: transparent;
+}
+
+#header .navbar .search i {
+    cursor: pointer;
+}
+
+#header .text {
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#header .text h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    text-shadow: 2px 6px 8px #292929;
+    font-weight: 100;
+}
+
+#header .text h1 {
+    font-size: 84px;
+}
+
+#header .text h3 {
+    font-size: 32px;
+    margin: 7px 0;
+    font-weight: 100;
+}
+
+#header .text button {
+    margin-top: 50px;
+    width: 190px;
+    height: 50px;
+    background: rgb(36, 36, 167);
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    font-family: -webkit-body;
+    border-bottom: 2px solid rgb(0, 0, 160);
+    box-shadow: 5px 5px 20px #000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#header .text button:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transform: translateY(-6px);
+}
+
+/* Content */
+#content {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    background: #f5f5f5;
+}
+
+#content #products {
+    width: 88%;
+    height: auto;
+    min-height: 210px;
+    max-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(255, 255, 255);
+    margin-top: -48px;
+    z-index: 1;
+    box-shadow: 0 3px 4px #686868b3;
+    margin-left: 50px;
+}
+
+#content #products .product {
+    width: 16%;
+    height: 90%;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+}
+
+#content #products .product a {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: -webkit-body;
+}
+
+#content #promotion .list .product .text-box a:hover, /*in promotion*/
+#content #selling .list .product .text-box a:hover, /*in selling*/
+#content #products .product a:hover {
+    color: rgb(35, 207, 12);
+}
+
+#content #products .product a img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+#content #advertisement {
+    width: 88%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#content #advertisement .ad {
+    width: 48%;
+    height: 310px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content #advertisement .healthy-food img,
+#content #advertisement .green-world img {
+    width: 100%;
+    height: auto;
+    transition: width 0.5s;
+}
+
+#content #advertisement .healthy-food img:hover,
+#content #advertisement .green-world img:hover {
+    width: 120%;
+    height: auto;
+    cursor: pointer;
+}
+
+
+#content #selling {
+    margin-top: 50px;
+    width: 88%;
+    height: 500px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content #selling h1 {
+    font-size: 42px;
+    margin: 50px 0;
+}
+
+#content #promotion .list,
+#content #selling .list {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#content #promotion .list .product,
+#content #selling .list .product {
+    width: 22%;
+    padding: 0 15px 30px;
+    cursor: pointer;
+}
+
+#content #promotion .list .product .img,
+#content #selling .list .product .img {
+    width: 100%;
+    height: 161px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content #promotion .list .product .img img,
+#content #selling .list .product .img img {
+    width: 100%;
+    height: auto;
+    transition: width 0.5s;
+}
+
+#content #promotion .list .product:hover img,
+#content #selling .list .product:hover img {
+    width: 120%;
+    height: auto;
+    transition: width 0.5s;
+}
+
+#content #promotion .list .product .text-box,
+#content #selling .list .product .text-box {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+#content #selling .list .product .text-box a {
+    color: #000;
+    text-decoration: none;
+}
+
+#content #promotion .list .product .text-box span,
+#content #selling .list .product .text-box span {
+    color: rgb(35, 207, 12);
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#content #promotion {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    align-self: center;
+}
+
+#content #promotion h1 {
+    font-size: 28px;
+    font-weight: 100;
+    margin: 50px 0 14px;
+}
+
+#content #promotion .content {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#content #promotion h3 {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#content #promotion .time {
+
+}
+
+#content #promotion .time .hours {
+
+}
+
+#content #promotion .time .minute {
+
+}
+
+#content #promotion .time .second {
+
+}
+
+#content #promotion .list {
+    
+}
+
+#content #promotion .list {
+    width: 88%;
+}
+
+#content #promotion .list .product {
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #000;
+}
+
+#content #promotion .list .product .text-box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes btnHover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
